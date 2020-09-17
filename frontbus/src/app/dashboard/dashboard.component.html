@@ -1,0 +1,199 @@
+
+	<app-header></app-header>
+		<div id="fh5co-wrapper">
+		<div id="fh5co-page">
+		<!-- end:header-top -->
+	
+		<div class="fh5co-hero" style="height: 600px;">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5">
+				<div class="desc">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-5 col-md-5" style="    margin: 0 30%;">
+								<div class="tabulation animate-box">
+
+								  <!-- Nav tabs -->
+								   <ul class="nav nav-tabs" role="tablist">
+								      <li role="presentation" class="active">
+								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Bus</a>
+								      </li>
+								     
+								   </ul>
+
+								   <!-- Tab panes -->
+									<div class="tab-content">
+									 <div role="tabpanel" class="tab-pane active" id="flights">
+										<div class="row">
+                      						<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">From:</label>
+													<ng-multiselect-dropdown
+														[placeholder]="'Select City'"
+														[data]="dropdownList"
+														formControlName="from_city"
+														
+														[settings]="dropdownSettings" >
+													</ng-multiselect-dropdown>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">To:</label>
+													<ng-multiselect-dropdown
+														[placeholder]="'Select City'"
+														[data]="dropdownList"
+														formControlName="to_city"
+														
+														[settings]="dropdownSettings" >
+													</ng-multiselect-dropdown>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-start">Journey Date</label>
+													<input [owlDateTimeTrigger]="dt5" [owlDateTime]="dt5" class="form-control" formControlName="journey_date"  placeholder="Select Your Date">
+                              						<owl-date-time [pickerType]="'calendar'" #dt5></owl-date-time>
+												</div>
+											</div>
+											<div class="col-xs-12">
+												<button type="submit" class="btn btn-primary btn-block" >Search</button>
+											</div>
+											</form>
+										</div>
+									 </div>
+									</div>
+
+								</div>
+							</div>
+							<div class="desc2 animate-box">
+								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
+										<!--<table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"></table>-->
+										
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="fh5co-blog-section" class="fh5co-section-gray">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+							<table class="table table-striped table-bordered table-sm row-border hover" style="color:black;">
+									<thead>
+										<tr>
+										<th>Route Name</th>
+										<th>PickUp</th>
+										<th>Destination</th>
+										<th>Stoppage Point</th>
+										<th>Journey date</th>
+										<th>Arrival Time</th>
+										<th>Price</th>
+										<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr  *ngFor="let bookings of booking">
+										<td>{{bookings.route_name}}</td>
+										<td>{{bookings.from_city}}</td>
+										<td>{{bookings.to_city}}</td>
+										<td>{{bookings.stoppage_point}}</td>
+										<td>{{bookings.journey_date | date: 'dd/MM/yyyy' }}</td>
+										<td>{{bookings.arrival_time}}</td>
+										<td>{{bookings.price}}</td>
+										<td><a><button type="button" class="btn btn-info btn-lg pull-center" (click)="passId(bookings._id)">Book</button></a></td>
+										</tr>
+									</tbody>
+									
+									</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- fh5co-blog-section -->
+		<div id="fh5co-testimonial">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Happy Clients</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
+						</blockquote>
+						
+					</div>
+					
+					
+				</div>
+				<div class="col-md-4">
+					<div class="box-testimony animate-box">
+						<blockquote>
+							<span class="quote"><span><i class="icon-quotes-right"></i></span></span>
+							<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
+						</blockquote>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<app-footer></app-footer>	
+
+	
+
+	</div>
+	<!-- END fh5co-page -->
+
+	</div>
+	<!-- END fh5co-wrapper -->
+
+	<!-- jQuery -->
+
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/sticky.js"></script>
+
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Superfish -->
+	<script src="js/hoverIntent.js"></script>
+	<script src="js/superfish.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Date Picker -->
+	<script src="js/bootstrap-datepicker.min.js"></script>
+	<!-- CS Select -->
+	<script src="js/classie.js"></script>
+	<script src="js/selectFx.js"></script>
+	
+	<!-- Main JS -->
+	<script src="js/main.js"></script>
+

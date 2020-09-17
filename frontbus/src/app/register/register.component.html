@@ -1,0 +1,85 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <div class="jumbotron jumbotron-sm">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12 col-lg-12">
+                  <h1 class="h1">
+                      Register </h1>
+              </div>
+          </div>
+      </div>
+    </div>  
+   
+        <div class="content">
+          <div style="align-items:center;
+          padding-top: 0px; padding-left: 150px; padding-right: 150px;">
+            <div class="container">
+              <div class="row">
+                <div class="form_bg">
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  
+                    <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label for="firstname">FirstName</label>
+                            <div class="form-group">
+                              <input type="text" class="form-control"formControlName="firstname" placeholder="Enter your firstname..">
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                            <label for="lastname">LastName</label>
+                            <div class="form-group">
+                            <input type="text" class="form-control" formControlName="lastname" placeholder="Enter your lastname">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="username">UserName</label>
+                            <div class="form-group">
+                          <input type="text" class="form-control" formControlName="username" placeholder="Enter your username">
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6"> 
+                        <div class="form-group">
+                        <label for="email">Email</label>   
+                        <input type="email" class="form-control"formControlName="email" placeholder="Enter your email">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="mobileno">Mobile No.</label>
+                            <div class="form-group">
+                                <input type="tel" class="form-control"formControlName="mobileNo" placeholder="Enter your mobileno">
+                        </div>
+                      </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="password">Password</label>
+                      <div class="form-group">
+                          <input type="password" class="form-control"formControlName="password" placeholder="Enter your password">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="confirmpassword">Confirm-Password</label>
+                        <div class="form-group">
+                            <input type="password" class="form-control"formControlName="confirmpassword" placeholder="Enter your confirmpassword">
+                        </div>
+                    </div>
+                  </div>            
+                    <div class="form-group">
+                              
+                      <button type="submit" class="btn btn-primary btn-lg pull-center">Register</button>&nbsp;&nbsp;
+                      <a href="#" routerLink="/dashboard" routerLinkActive="activemenu" class="alert-link">
+                        <button type="button" class="btn btn-danger btn-lg pull-center">Cancel</button></a> 
+                  </div>
+                </form>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+        
+  </div>

@@ -1,0 +1,19 @@
+.content-page > .content {
+    margin-bottom: 60px;
+    margin-top: 65px;
+    padding: 5px 117px 42px 0px;
+}
+
+.jumbotron {
+    background: #F78536;
+    color: #FFF;
+    border-radius: 0px;
+    }
+    .jumbotron-sm { padding-top: 24px;
+    padding-bottom: 24px; }
+    .jumbotron small {
+    color: #FFF;
+    }
+    .h1 small {
+    font-size: 24px;
+    }

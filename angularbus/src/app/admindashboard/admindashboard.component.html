@@ -1,0 +1,60 @@
+<div id="wrapper">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <div class="content-page">
+      <div class="content">
+          <div class="">
+              <div class="page-header-title">
+                  <h4 class="page-title">Dashboard</h4>
+              </div>
+          </div>
+          <div class="page-content-wrapper ">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-sm-6 col-lg-4">
+                          <div class="panel text-center">
+                              <div class="panel-heading">
+                                  <h4 class="panel-title text-muted font-light">Total Users</h4>
+                              </div>
+                              <div class="panel-body p-t-10">
+                                  <h2 class="m-t-0 m-b-15"><i
+                                          class="mdi mdi-arrow-down-bold-circle-outline text-danger m-r-10"></i><b><p [innerHTML]="this.user"></p></b>
+                                  </h2>
+                                 
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <div class="col-sm-6 col-lg-4">
+                          <div class="panel text-center">
+                              <div class="panel-heading">
+                                  <h4 class="panel-title text-muted font-light">Total Route</h4>
+                              </div>
+                              <div class="panel-body p-t-10">
+                                  <h2 class="m-t-0 m-b-15"><i
+                                          class="mdi mdi-arrow-up-bold-circle-outline text-primary m-r-10"></i><b><p  [innerHTML]="this.routes"></b>
+                                  </h2>
+                                  
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 col-lg-4">
+                          <div class="panel text-center">
+                              <div class="panel-heading">
+                                  <h4 class="panel-title text-muted font-light">Total Booking</h4>
+                              </div>
+                              <div class="panel-body p-t-10">
+                                  <h2 class="m-t-0 m-b-15"><i
+                                          class="mdi mdi-arrow-down-bold-circle-outline text-danger m-r-10"></i><b><p [innerHTML]="this.booking"></b>
+                                  </h2>
+                                 
+                              </div>
+                          </div>
+                      </div>
+                  </div>                    
+              </div>
+          </div>
+      </div>
+      <footer class="footer"> © WebAdmin - All Rights Reserved. </footer>
+  </div>
+</div>

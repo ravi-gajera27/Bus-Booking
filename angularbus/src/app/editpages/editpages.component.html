@@ -1,0 +1,66 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+          <div class="content-page">
+            <div class="content">
+              <div class="">
+                <div class="page-header-title">
+                  <h4 class="page-title">Pages</h4>
+                 </div>
+              </div><div style="align-items:center">
+                <div class="container">
+                  <div class="row">
+                    <div class="form_bg">
+                        <form (ngSubmit)="onSubmit(p)"  #p="ngForm" >
+                          <br/>
+                          <div class="form-group">
+                              <input type="hidden"  class="form-control" name="_id" ngModel required >
+                            </div>        
+                          <label for="title">Title</label>
+                              <div class="form-group">
+                              
+                                <input type="text" class="form-control" name="title" ngModel required >
+                              </div>
+                              <label for="meta_title">Meta Tittle</label>
+                              <div class="form-group">
+                              
+                                <input type="text" class="form-control" name="meta_title" ngModel required >
+                              </div>
+                              <label for="keyword">KeyWords</label>
+                              <div class="form-group">
+                              
+                                <input type="text" class="form-control" name="keyword" ngModel required >
+                              </div>
+                              <label for="meta_description">Meta Description</label>
+                              <div class="form-group">
+                              
+                                <textarea class="form-control" name="meta_description" ngModel required ></textarea>
+                                  </div>
+                              <label for="short_description">Short Description</label>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="short_description" ngModel required ></textarea>
+                                </div>
+                            
+                              <label for="description">Description</label>
+                                  <div class="form-group">
+                                    <ejs-richtexteditor id='defaultRTE' class="form-control" name="description"  [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' ngModel required></ejs-richtexteditor>
+                                  </div>
+                          
+                    
+                      <br/>
+                      <div class="align-center">
+                        <button type="submit" class="btn btn-primary btn-lg pull-center">Update</button>
+                                                        &nbsp; &nbsp;
+                        <a href="#" routerLink="/pages" routerLinkActive="activemenu" class="alert-link">
+                          <button type="button" class="btn btn-danger btn-lg pull-center">Cancel</button></a> 
+                                
+                        </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div> 
+  </div>
+  </div>
+  <footer class="footer"> ©WebAdmin - All Rights Reserved. </footer>
+  </div>

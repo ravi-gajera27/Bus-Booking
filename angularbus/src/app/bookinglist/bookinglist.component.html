@@ -1,0 +1,54 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    <div class="content-page">
+        <div class="content">
+            <div class="">
+                <div class="page-header-title">
+                    <h4 class="page-title">Booking List</h4>
+                </div>
+            </div>
+            <div class="page-content-wrapper ">
+                <div class="container">
+                    <div class="row">
+                            <div style="margin-top:100px;"> 
+                                    <table class="table table-striped table-bordered table-sm row-border hover" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+                                    <thead>
+                                        <tr>
+                                        <th>Username</th>
+                                        <th>email</th>
+                                        <th>PickUp</th>
+                                        <th>Destination</th>
+                                        <th>Booking Date</th>
+                                        <th>Journey date</th>
+                                        <th>Total Persons</th>
+                                        <th>Price</th>
+                                        <th>Arrival Time</th>
+                                        <th>Mobile No.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let bookings of booking">
+                                        
+                                        <td>{{bookings.username}}</td>
+                                        <td>{{bookings.email}}</td>
+                                        <td>{{bookings.to_city}}</td>
+                                        <td>{{bookings.from_city}}</td>
+                                        <td>{{bookings.booking_date}}</td>
+                                        <td>{{bookings.journey_date}}</td>
+                                        <td>{{bookings.total_user}}</td>
+                                        <td>{{bookings.price}}</td>
+                                        <td>{{bookings.journey_time}}</td>
+                                        <td>{{bookings.mobileNo}}</td>
+                                        </tr>
+                                    </tbody>
+                                    
+                                    </table>
+                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <footer class="footer"> © WebAdmin - All Rights Reserved. </footer>
+    </div>
+  </div>

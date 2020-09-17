@@ -1,0 +1,15 @@
+#sidebar > ul > li > a {
+    color: #2a323c;
+    display: block;
+    padding: 15px 25px;
+    background-color: #ffffff;
+    font-size: 15px;
+    height: 50px !important;
+    }
+    
+    a{
+    color: #2a323c;
+    font-size: 15px;
+    padding: 8px 18px;
+    }
+    

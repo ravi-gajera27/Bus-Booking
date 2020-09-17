@@ -1,0 +1,53 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+          <div class="content-page">
+            <div class="content">
+              <div class="">
+                <div class="page-header-title">
+                  <h4 class="page-title">Email Template</h4>
+                 </div>
+              </div><div style="align-items:center">
+                <div class="container">
+                  <div class="row">
+                    <div class="form_bg">
+                        <form (ngSubmit)="onSubmit(ef)"  #ef="ngForm" >
+                          <br/>
+                          <div class="form-group">
+                              <input type="hidden"  class="form-control" name="_id" ngModel required >
+                            </div>
+              
+              
+                          <label for="title">Title</label>
+                              <div class="form-group">
+                              
+                                <input type="text" class="form-control" name="title" ngModel required >
+                              </div>
+                          <label for="subject">Subject</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" ngModel required >
+                            </div>
+                        
+                          <label for="email_format">Email</label>
+                              <div class="form-group">
+                                <ejs-richtexteditor id='defaultRTE' class="form-control" name="email"  [toolbarSettings]='tools' [quickToolbarSettings]='quickTools' ngModel required></ejs-richtexteditor>
+                              </div>
+                      
+                    
+                      <br/>
+                      <div class="align-center">
+                        <button type="submit" class="btn btn-primary btn-lg pull-center">Update</button>
+                                                        &nbsp; &nbsp;
+                        <a href="#" routerLink="/emailformat" routerLinkActive="activemenu" class="alert-link">
+                          <button type="button" class="btn btn-danger btn-lg pull-center">Cancel</button></a> 
+                                
+                        </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div> 
+  </div>
+  </div>
+  <footer class="footer"> ©WebAdmin - All Rights Reserved. </footer>
+  </div>

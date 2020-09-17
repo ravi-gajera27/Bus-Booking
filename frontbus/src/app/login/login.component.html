@@ -1,0 +1,52 @@
+<div id="wrapper">
+    <app-header></app-header>
+    <div class="jumbotron jumbotron-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <h1 class="h1">
+                        Login </h1>
+                </div>
+            </div>
+        </div>
+      </div> 
+        <div class="content">
+          <div style="align-items:center;
+          padding-top: 55px; padding-left: 511px; padding-right: 150px;">
+            <div class="container">
+              <div class="row">
+                <div class="form_bg">
+                  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="emial">Email</label>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Your Email" formControlName="email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label for="password">PassWord</label>
+                        <div class="form-group">
+                          <input type="password" class="form-control" placeholder="Enter Your Password" formControlName="password">
+                        </div>
+                    </div>
+                  </div>
+                      
+                    <div class="form-group">
+                              
+                      <button type="submit" class="btn btn-primary btn-lg pull-center">Login</button>&nbsp;&nbsp;
+                      <a href="#" routerLink="/register" routerLinkActive="activemenu" class="alert-link">
+                        <button type="button" class="btn btn-info btn-lg pull-center">Register</button></a>&nbsp;&nbsp;
+                      <a href="#" routerLink="/dashboard" routerLinkActive="activemenu" class="alert-link">
+                        <button type="button" class="btn btn-danger btn-lg pull-center">Cancel</button></a> 
+                  </div>
+                </form>
+              </div>
+              </div>
+              </div>
+            </div>
+        </div>
+        
+  </div>

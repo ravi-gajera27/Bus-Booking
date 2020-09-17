@@ -1,0 +1,64 @@
+<div class="topbar">
+    <div class="topbar-left">
+      <div class="text-center"> <div class="logo">Admin</div> 
+          <span></span></div>
+        </div>
+          <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+              <div class="">
+                <div class="pull-left">
+                  <button type="button" class="button-menu-mobile open-left waves-effect waves-light"> <i
+                    class="ion-navicon"></i> </button>
+                    <span class="clearfix"></span></div>
+                      <ul class="nav navbar-nav navbar-right pull-right">
+                        <li class="dropdown"> <a href="#" class="dropdown-toggle profile waves-effect waves-light"
+                            data-toggle="dropdown" aria-expanded="true"> 
+                            <span class="profile-username" [innerHTML]="this.name"> </span> </a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#" routerLink="/profile" routerLinkActive="activemenu" class="alert-link">Profile</a></li>
+                              <li> <a class="alert-link"><button type="button" class="btn btn-info btn-lg pull-center align-center" data-toggle="modal" (click)=updatepass(this.name) data-target=#updatePassModel>Change Password</button></a></li>
+                              <li class="divider"></li>
+                              <li><a class="alert-link"><button class="btn btn-default" (click)="logout()">Logout</button></a></li>
+                            </ul>
+                        </li>
+                      </ul>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+<div id="updatePassModel" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+         
+          <h4 class="modal-title"><b>Update Password</b></h4>
+        </div>
+      <form (ngSubmit)="onUpdatePass(up)" #up="ngForm">
+        <div id="bootstrapModel" class="modal fade" role="dialog"></div>
+        <div class="modal-body"> 
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" ngModel readonly>
+        </div>
+      <label for="oldpassword">OldPassword</label>
+      <div class="form-group">
+          <input type="text" class="form-control" name="oldpassword" placeholder="oldpassword"  ngModel required>
+      </div>
+      <label for="newpassword">NewPassword</label>
+      <div class="form-group">
+          <input type="text" class="form-control" name="newpassword" placeholder="newpassword"  ngModel required>
+      </div>
+      <label for="confirmpassword">ConfirmPasword</label>
+      <div class="form-group">
+          <input type="text" class="form-control" name="confirmpassword" Placeholder="confirmpassword"  ngModel required>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Update</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+    </div>
+</form>
+</div>
+</div>
+</div>

@@ -1,0 +1,61 @@
+<div id="wrapper">
+  <app-header></app-header>
+  <app-sidebar></app-sidebar>
+  <div class="content-page">
+      <div class="content">
+          <div class="" id="user">
+              <div class="page-header-title">
+                  <h4 class="page-title">Users</h4>
+              </div>
+          </div>
+          <div style="align-items:center">
+              <div class="container">
+                  <div class="row">
+                      <div class="form_bg">
+                          <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()">
+                               <h2 class="text-center">Add User</h2>
+                              <br/>
+                              <label for="firstname">Firstname</label>
+                              <div class="form-group">
+                                  <input type="text" class="form-control"formControlName="firstname" placeholder="firstName">
+                              </div>
+                              <label for="lastname">Lastname</label>
+                              <div class="form-group">
+                                  <input type="text" class="form-control"formControlName="lastname" placeholder="lastName">
+                              </div>
+                              <label for="username">Username</label>
+                              <div class="form-group">
+                                  <input type="text" class="form-control"formControlName="username" placeholder="UserName">
+                              </div>
+                              <label for="email">Email</label>
+                              <div class="form-group">
+                                  <input type="text" class="form-control"formControlName="email" placeholder="email">
+                              </div>
+                              <label for="mobileno">Mobile No.</label>
+                              <div class="form-group">
+                                  <input type="number" class="form-control"formControlName="mobileno" placeholder="email">
+                              </div>
+                              <label for="password">password</label>
+                              <div class="form-group">
+                                  <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                              </div>
+                              <label for="confirmpassword">Confirm-password</label>
+                              <div class="form-group">
+                                  <input type="password" class="form-control" formControlName="confirm_password" placeholder="confirm-Password">
+                              </div>
+                              <br/>
+                              <div class="align-center">
+                                  <button type="submit" class="btn btn-success" id="login">Add User</button>&nbsp;&nbsp;
+                                  <a href="#" routerLink="/users" routerLinkActive="activemenu" class="alert-link">
+                                      <button type="button" class="btn btn-danger">Cancle</button></a>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                </div>
+              </div> 
+          </div>
+      </div>
+      <footer class="footer"> © WebAdmin - All Rights Reserved. </footer>
+  </div>
+

@@ -1,0 +1,103 @@
+<div id="wrapper">
+  <app-header></app-header>
+  <div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Booking </h1>
+            </div>
+        </div>
+    </div>
+  </div>  
+ 
+      <div class="content">
+        <div style="align-items:center;
+        padding-top: 0px; padding-left: 150px; padding-right: 150px;">
+          <div class="container">
+            <div class="row">
+              <div class="form_bg">
+                <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+                
+                  <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="firstname">Name</label>
+                          <div class="form-group">
+                            <input type="text" class="form-control"formControlName="name" placeholder="Enter your full name..">
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                          <label for="email">Email</label>
+                          <div class="form-group">
+                          <input type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <label for="phone_no">Mobile No.</label>
+                          <div class="form-group">
+                        <input type="tel" class="form-control" formControlName="mobileNo" placeholder="Enter your MobileNo">
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"> 
+                      <div class="form-group">
+                      <label for="from_city">Pick Up</label>   
+                      <input type="text" class="form-control" formControlName="from_city" readonly>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="to_city">Destination</label>
+                          <div class="form-group">
+                              <input type="text" class="form-control"formControlName="to_city" readonly>
+                      </div>
+                    </div>
+                  </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="journey_date">Journey date</label>
+                      <div class="form-group">
+                        <input [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3" class="form-control" formControlName="journey_date" readonly>
+                        <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="arrival">Arrival Time</label>
+                    <div class="form-group">
+                        <input type="text" class="form-control" formControlName="time" readonly>
+                      </div>
+                    </div>  
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="person">Person</label>
+                    <div class="form-group">
+                      <input type="number" class="form-control" [min]='1' formControlName="person" id="input" (change)="countPrice($event)">
+                    
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="price">Price</label>
+                        <div class="form-group">
+                      <input type="number" class="form-control" id="output" formControlName="price" [min]='10' readonly>
+                    </div>
+                  </div>
+                 
+                </div>
+                
+                  <div class="form-group">
+                            
+                      <button type="submit" class="btn btn-primary btn-lg pull-center">Book Now</button>&nbsp;&nbsp;
+                    <a href="#" routerLink="/dashboard" routerLinkActive="activemenu" class="alert-link">
+                      <button type="button" class="btn btn-danger btn-lg pull-center">Cancel</button></a> 
+                </div>
+              </form>
+            </div>
+            </div>
+            </div>
+          </div>
+      </div>
+      
+</div>
